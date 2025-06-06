@@ -38,7 +38,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
          * 여기서 "/user"는 “사용자별 경로”를 나타내는 표준 프리픽스
          * 클라이언트에서 subscribe할 때도 /user/queue/xxx 형태로 구독
          */
-        registry.setUserDestinationPrefix(("/user"));
+        registry.setUserDestinationPrefix("/user/{userId}/**");
     }
 
     /**
